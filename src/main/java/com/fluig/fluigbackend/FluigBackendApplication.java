@@ -7,11 +7,7 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 public class FluigBackendApplication {
 
 	public static void main(String[] args) {
-		try {
 			SpringApplication.run(FluigBackendApplication.class, args);
-		} catch (Exception e) {
-			e.printStackTrace();
-		}
 	}
 
 
