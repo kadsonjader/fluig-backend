@@ -11,11 +11,11 @@ public class ConsumoService {
     @Autowired
     private ConsumoRepository repository;
 
-    private Consumo findByCdConsumo(Integer cdConsumo){
+    public Consumo findByCdConsumo(Integer cdConsumo){
         return repository.findByCdConsumo(cdConsumo);
     }
 
-    private Consumo findByCdVeiculo(Integer cdVeiculo){
+    public Consumo findByCdVeiculo(Integer cdVeiculo){
         return repository.findByCdVeiculo(cdVeiculo);
     }
 
