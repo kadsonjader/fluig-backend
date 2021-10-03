@@ -22,5 +22,4 @@ public class Veiculo implements Serializable {
     private Date dtFabricacao;
     private Double nuConsumoCidade;
     private Double nuConsumoRodovia;
-
 }

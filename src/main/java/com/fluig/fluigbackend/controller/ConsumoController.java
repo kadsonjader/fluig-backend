@@ -1,11 +1,12 @@
 package com.fluig.fluigbackend.controller;
 
 import com.fluig.fluigbackend.model.Consumo;
+import com.fluig.fluigbackend.model.request.BuscaRequest;
 import com.fluig.fluigbackend.service.ConsumoService;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
+
+import java.util.List;
 
 @RestController
 public class ConsumoController {
@@ -20,5 +21,9 @@ public class ConsumoController {
     @GetMapping("/consumos/{cdVeiculo}")
     public Consumo findByCdVeiculo(@PathVariable Integer cdVeiculo){
         return consumoService.findByCdVeiculo(cdVeiculo);
+    }
+    @PostMapping("/consumos/veiculos")
+    public List<Consumo> findAllConsumos(@RequestBody BuscaRequest request){
+        return consumoService.findAllConsumos(request);
     }
 }
