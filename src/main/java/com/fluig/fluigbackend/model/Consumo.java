@@ -14,13 +14,15 @@ public class Consumo implements Serializable {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer cdConsumo;
-
     private Integer cdVeiculo;
     private Double nuPrecoGasolina;
     private Double nuKmCidade;
     private Double nuKmRodovia;
 
-    @ManyToOne
+    @OneToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "cdVeiculo", updatable = false, insertable = false, nullable = true)
     private Veiculo veiculo;
+
+    private Double qtTotalGasto;
+    private Double vlTotalCombustivel;
 }
