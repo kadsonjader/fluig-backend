@@ -22,7 +22,4 @@ public class Consumo implements Serializable {
     @OneToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "cdVeiculo", updatable = false, insertable = false, nullable = true)
     private Veiculo veiculo;
-
-    private Double qtTotalGasto;
-    private Double vlTotalCombustivel;
 }
