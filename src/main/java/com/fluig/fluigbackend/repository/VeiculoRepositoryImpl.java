@@ -35,7 +35,7 @@ public class VeiculoRepositoryImpl implements VeiculoRepositoryCustom {
         Map<String, Object> parameters = new HashMap<>();
 
         StringBuilder sql = new StringBuilder();
-        sql.append(" select v from LinhaTarifa v ");
+        sql.append(" select v from Veiculo v ");
         sql.append("where 1=1");
         appendTxtBusca(request, sql, parameters);
         sql.append("order by v.cdVeiculo desc");
